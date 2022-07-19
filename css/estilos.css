@@ -50,6 +50,9 @@ header {
     font-size: 20px;
     color: #2B2D42;
 }
+.navegador a:hover {
+    color:antiquewhite;
+}
 
 .diferente {
   display: flex;
@@ -59,6 +62,10 @@ header {
   margin: 0%;
   padding: 0%;
  
+}
+.diferente img:hover {
+    
+    filter: invert(100%);
 }
 
 .nombre {
@@ -73,6 +80,10 @@ header {
     
 
 }
+.animate__animated {
+    animation-duration: 3s;
+    
+}
 
 /* -----------------NOSOTROS----------------*/
 .grillanos {
@@ -84,6 +95,12 @@ header {
     "somos"
     "fotosbio" 
     "footer" ;
+
+
+}
+.equipo:hover {
+    transform: scale(1.03);
+    transition: 1s;
 
 
 }
@@ -114,8 +131,15 @@ header {
 }
 .fotosbio a img {
     border-radius: 100%;
+    filter:grayscale(100%)
 }
+.fotosbio a img:hover {
+    
+    filter: none;
+    transform: scale(1.05);
+    transition: 1s;
 
+}
 
 /* ----------------- SERVICIOS ----------------*/
 .grillaser {
@@ -257,7 +281,7 @@ header {
     padding: 10px;
 
 }
-  .foto3 { 
+ .foto3 { 
       grid-area: foto3; 
       display: flex;
       justify-content: center;
@@ -271,6 +295,23 @@ header {
       justify-content: center;
       
 }
+.foto1 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto2 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto3 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto4 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
 /* ----------------- CONTACTO ----------------*/	
 .contactogri {
     background-color:#ff9800;
@@ -319,10 +360,14 @@ label>input, textarea {
     font-size: 250%;
     text-align: center;
 }
+input,textarea {
+    transition: all 1s;
+}
 
-
-
-
+input:focus, textarea:focus{
+    width: 1015px;
+    background-color: #1D3557;
+}
 
  /* ----------------- FOOTER ----------------*/
 
