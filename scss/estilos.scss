@@ -1,0 +1,29 @@
+.navegador{ 
+    grid-area: header;
+    background-color: rgba(113,35,0, 0.5);
+    position: fixed;
+    top: 0%;
+    height: 4rem;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        padding: 0.625rem;
+        font-size: 20px;
+        color: #2B2D42;
+        &:hover {
+            color:antiquewhite;
+        }
+        
+    }
+}
+.fondofooter {
+    grid-area: footer;
+    background-color: #ffcc50;
+    text-align: center;
+    
+}
