@@ -1,4 +1,4 @@
-.navegador{ 
+/* .navegador{ 
     grid-area: header;
     background-color: rgba(113,35,0, 0.5);
     position: fixed;
@@ -26,4 +26,1459 @@
     background-color: #ffcc50;
     text-align: center;
     
+} */
+/* --------- ESTILOS GENERALES ------------  */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    
+    font-family: Montserrat;
+    background-color: #712300;
+}
+
+/* ----------------- INDEX ----------------*/
+
+.contenedor { 
+    background-color:#ff9800;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 63px 600px 73px;
+    grid-template-areas: "header" 
+    "nombre" 
+    "footer" ;
+
+}
+header {
+    height: 4rem;
+}
+
+.navegador {
+    grid-area: header;
+    background-color: rgba(113,35,0, 0.5);
+    position: fixed;
+    top: 0%;
+    height: 4rem
+
+}
+
+.navegador ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    
+}
+
+.navegador a {
+    text-decoration: none;
+    padding: 0.625rem;
+    font-size: 20px;
+    color: #2B2D42;
+}
+.navegador a:hover {
+    color:antiquewhite;
+}
+
+.diferente {
+  display: flex;
+  align-items: center;
+  width: 5%;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+ 
+}
+.diferente img:hover {
+    
+    filter: invert(100%);
+}
+
+.nombre {
+    display: flex;
+    grid-area: nombre;
+    font-size: 600%;
+    text-align: center;
+    background-image: url(../multimedia/cabecera-clauqeta-que-es-formacion-audiovisual.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10rem;
+    
+
+}
+.animate__animated {
+    animation-duration: 3s;
+    
+}
+
+/* -----------------NOSOTROS----------------*/
+.grillanos {
+    background-color:#ff9800;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 63px 300px 1084px 73px;
+    grid-template-areas: "header" 
+    "somos"
+    "fotosbio" 
+    "footer" ;
+
+
+}
+.equipo:hover {
+    transform: scale(1.03);
+    transition: 1s;
+
+
+}
+.somos {
+    grid-area: somos;
+    border: solid  1px black;
+    margin: 0px;
+    padding: 40px;
+    padding-left: 3%;
+    background-color: #cf6c09;
+
+}
+.equipo {
+    padding: 1rem;
+    font-size: 350%;
+    text-align: center;
+    border-bottom: solid 1px black;
+
+}
+.fotosbio {
+    display: flex;
+    flex-direction: column;
+    grid-area: fotosbio;
+    padding: 1%; 
+    padding-left: 44%;
+    background-color: #ff9800;
+
+}
+.fotosbio a img {
+    border-radius: 100%;
+    filter:grayscale(100%)
+}
+.fotosbio a img:hover {
+    
+    filter: none;
+    transform: scale(1.05);
+    transition: 1s;
+
+}
+
+/* ----------------- SERVICIOS ----------------*/
+.grillaser {
+    background-color:#ff9800;
+    display: grid;
+    grid-template-columns: 1fr;
+     grid-template-rows: 63px 500px 190px 500px 190px 500px 190px 500px 190px 400px 60px;
+    grid-template-areas:
+    "header" 
+    "parallax1"
+    "servicios1"
+    "parallax2 "
+    "servicios2"
+    "parallax3"
+    "servicios3"
+    "parallax4"
+    "servicios4"
+    "parallax5 "
+    "footer" ;
+    
+}
+/* .bgnav div {
+    background-color:#ff9800;
+} */
+/* mapa */
+$color:  (
+    for1: red,
+    for2: yellow,
+    for3: purple,
+    for4: green
+
+);
+/* .servicios-  {
+    grid-area: servicios1;
+    border: solid  1px black;
+    margin: 50px;
+    padding: 10px; 
+    text-align: center;
+} */
+@each $for, $back in $color {
+     .servicios-#{$for} {
+        grid-area: servicios1;
+        border: solid  1px black;
+        margin: 50px;
+        padding: 10px; 
+        text-align: center;
+        background-color: $back;
+     }
+    
+}
+
+.contenido {
+    color: cadetblue;
+    text-shadow: #cf6c09;
+    font-style: italic;
+}
+.contenido-diferente {
+    @extend .contenido;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@mixin sizes ($tamano, $color){
+    font-size: $tamano;
+    color: $color;
+}
+.titulo1 {
+    @include sizes(40px, green)
+}
+/* .servicios2 {
+    grid-area: servicio2;
+    border: solid  1px black;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+}
+.servicios3 {
+    grid-area: servicio3;
+    border: solid  1px black;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+
+}
+.servicios4 {
+    grid-area: servicio4;
+    border: solid  1px black;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+
+} */
+
+.parallax1 {
+    grid-area: parallax1;
+    background-image: url(../multimedia/teatro.jpeg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax2 {
+    grid-area: parallax2;
+    background-image: url(../multimedia/camaras-de-cine-blackmagic-pocket.jpeg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax3 {
+    grid-area: parallax3;
+    background-image: url(../multimedia/CLAQUETA.jpeg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax4 {
+    grid-area: parallax4;
+    background-image: url(../multimedia/pexels-donald-tong-66134.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.parallax5 {
+    grid-area: parallax5;
+    background-image: url(../multimedia/teatro.jpeg);
+    min-height: 445px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/* ----------------- PROYECTOS ----------------*/
+.conteiner {
+    background-color:#ff9800;
+    display: grid; 
+    grid-template-columns:repeat(5, 286px) ; 
+    grid-template-rows: 63px 63px 250px 200px 400px 73px; 
+    gap: 0px 3px; 
+    grid-template-areas: 
+      "header header header header header"
+      "titulo titulo titulo titulo titulo"
+      "foto1 foto1 foto2 foto2 foto2"
+      "foto1 foto1 foto2 foto2 foto2"
+      "foto4 foto4 foto4 foto3 foto3"
+      "footer footer footer footer footer"
+}
+.titulo { 
+    background-color:  #cf6c09;
+    grid-area: titulo;
+    padding: 10px;
+    text-align: center;
+
+
+}
+  .foto1 { 
+      grid-area: foto1; 
+      display: flex;
+      justify-content: start;
+      padding: 10px;
+}
+.foto2 { 
+    grid-area: foto2; 
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+ .foto3 { 
+      grid-area: foto3; 
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+   
+}
+  .foto4 { 
+      grid-area: foto4; 
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      
+}
+.foto1 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto2 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto3 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.foto4 img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+/* ----------------- CONTACTO ----------------*/	
+.contactogri {
+    background-color:#ff9800;
+    display: grid;
+    grid-template-columns: 1fr;
+     grid-template-rows: 63px 700px 60px;
+    grid-template-areas: 
+    "header"
+    "formulario"
+    "footer"
+
+}
+.contacto-bg {
+    grid-area: formulario;
+    background-image: url(../multimedia/camara-de-cine.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+} 
+.formulario {
+    color: white;
+}
+
+
+
+label {
+    display: block;
+    padding: 1rem;
+}
+
+label>input, textarea {
+    display: block;
+    padding: 1rem;
+    width: 80%;
+    opacity: 35%;
+    border: solid 1px black;
+}
+.enviar {
+    padding: 2rem;
+}
+
+.contactanos {
+    color: white;
+    padding: 2rem;
+    margin: 1rem;
+    font-size: 250%;
+    text-align: center;
+}
+input,textarea {
+    transition: all 1s;
+}
+
+input:focus, textarea:focus{
+    width: 1015px;
+    background-color: #1D3557;
+}
+
+ /* ----------------- FOOTER ----------------*/
+
+.fondofooter {
+    grid-area: footer;
+    background-color: #ffcc50;
+    text-align: center;
+    
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+
+}
+.redes img {
+    width: 2%;
+    padding: 0px 10px;
+}
+
+/* ----------------- responsive index laptop ----------------*/
+
+@media screen and (max-width:1024px) {
+    .contenedor{
+        grid-template-columns: 1024px;
+        grid-template-rows: 48px 479px 66px;
+        grid-template-areas: "header"
+                             "nombre"
+                             "footer"
+                             ;
+    }
+
+
+    .navegador {
+        height: 3rem;
+    }
+    .nombre{
+        font-size: 450%;
+       
+    }   
+} 
+/* ----------------- responsive index tablet ----------------*/
+
+@media screen and (max-width:768px) {
+    .contenedor{
+        grid-template-columns: 768px;
+        grid-template-rows: 48px 400px 64px;
+        grid-template-areas: "header"
+                             "nombre"
+                             "footer"
+                             ;
+    }
+    .navegador ul{
+        
+        height: 3rem;
+        
+    }
+    .diferente{
+        width: 5%;
+    }
+    .nombre{
+        font-size: 400%;
+       
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+   
+} 
+/* ----------------- responsive index mobile ----------------*/
+
+@media screen and (max-width:425px) {
+    .contenedor{
+        grid-template-columns: 425px;
+        grid-template-rows: 162px 300px 53px;
+        grid-template-areas: "header"
+                             "nombre"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .nombre{
+        font-size: 200%;
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+       padding: 0px 5px;
+    
+    }
+} 
+/* ----------------- responsive index mobile ----------------*/
+
+@media screen and (max-width: 375px) {
+        .contenedor {
+            grid-template-columns: 375px;
+            grid-template-rows: 162px 300px 53px;
+            grid-template-areas: "header"
+                                 "nombre"
+                                 "footer"
+                                 ;
+        }
+        .navegador{
+            height: 9.9rem;
+            position:absolute;
+        }
+        .navegador ul{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 3rem;
+            padding-top: 5px;
+            
+        }
+        .diferente{
+            width: 15%;
+        }
+        .nombre{
+            font-size: 150%;
+            
+        }
+        .fondofooter{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    
+        header {
+            height: 3rem;
+        }
+        .redes img{
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 4%;
+            padding: 0px 5px;
+        
+        }
+    
+    } 
+/* ----------------- responsive index mobile ----------------*/
+
+@media screen and (max-width:320px) {
+    .contenedor{
+        grid-template-columns: 320px;
+        grid-template-rows: 162px 255px 90px;
+        grid-template-areas: "header"
+                             "nombre"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 9.9rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    .nombre{
+        font-size: 100%;
+    }
+    }
+/* ----------------- responsive proyecto laptop ----------------*/
+
+@media screen and (max-width:1024px) {
+    .conteiner{
+        grid-template-columns: repeat(2, 510px);
+        grid-template-rows: 48px 50px 300px 300px 66px;
+        grid-template-areas: "header header"
+                             "titulo titulo"
+                             "foto1 foto2"
+                             "foto3 foto4"
+                             "footer footer"
+                             ;
+    }
+    header{
+        height: 3rem;
+        
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .navegador {
+        height: 3rem;
+    }
+    .nombre{
+        padding: 5rem;
+    }
+} 
+/* ----------------- responsive proyecto tablet ----------------*/
+
+@media screen and (max-width:768px) {
+    .conteiner{
+        grid-template-columns: repeat(2, 382px);
+        grid-template-rows: 48px 50px 300px 300px 64px;
+        grid-template-areas: "header header"
+                             "titulo titulo"
+                             "foto1 foto2"
+                             "foto3 foto4"
+                             "footer footer"
+                             ;
+    }
+    .navegador ul{
+        
+        height: 3rem;
+        
+    }
+    .diferente{
+        width: 8%;
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+} 
+/* ----------------- responsive proyecto mobile ----------------*/
+
+@media screen and (max-width:425px) {
+    .conteiner{
+        grid-template-columns: 425px;
+        grid-template-rows: 162px 87px 300px 300px 300px 300px 53px;
+        grid-template-areas: "header"
+                             "titulo"
+                             "foto1"
+                             "foto2"
+                             "foto3"
+                             "foto4"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+} 
+/* ----------------- responsive proyecto mobile ----------------*/
+
+@media screen and (max-width:375px) {
+    .conteiner{
+        grid-template-columns: 375px;
+        grid-template-rows: 162px 87px 300px 300px 300px 300px 53px;
+        grid-template-areas: "header"
+                             "titulo"
+                             "foto1"
+                             "foto2"
+                             "foto3"
+                             "foto4"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 9.9rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+} 
+/* ----------------- responsive proyecto mobile ----------------*/
+
+@media screen and (max-width:320px) {
+    .conteiner{
+        grid-template-columns: 320px;
+        grid-template-rows: 162px 87px 225px 225px 225px 225px 90px;
+        grid-template-areas: "header"
+                             "titulo"
+                             "foto1"
+                             "foto2"
+                             "foto3"
+                             "foto4"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 9.9rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    }
+    /* ----------------- responsive nosotros laptop ----------------*/
+
+@media screen and (max-width:1024px) {
+.grillanos{
+        grid-template-columns: 1024px;
+        grid-template-rows: 48px 200px 820px 66px;
+        grid-template-areas: "header"
+                             "somos"
+                             "fotosbio"
+                             "footer"
+                             ;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .navegador {
+        height: 3rem;
+    }
+} 
+/* ----------------- responsive nosotros tablet ----------------*/
+
+@media screen and (max-width:768px) {
+    .grillanos{
+        grid-template-columns: 768px;
+        grid-template-rows: 48px 280px 667px 64px;
+        grid-template-areas: "header"
+                             "somos"
+                             "fotosbio"
+                             "footer"
+                             ;
+    }
+    .navegador ul{
+        
+        height: 3rem;
+        
+    }
+    .diferente{
+        width: 5%;
+    }
+
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+
+} 
+/* ----------------- responsive nosotros mobile ----------------*/
+
+@media screen and (max-width:425px) {
+    .grillanos{
+        grid-template-columns: 425px;
+        grid-template-rows: 162px  428px 522px 53px;
+        grid-template-areas: "header"
+                             "somos"
+                             "fotosbio"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .equipo{
+        padding: 20px;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    .fotosbio{
+        align-content: center;
+        padding-left: 35%;
+    }
+ 
+}
+/* ----------------- responsive nosotros mobile ----------------*/
+
+@media screen and (max-width:375px) {
+    .grillanos{
+        grid-template-columns: 375px;
+        grid-template-rows: 162px  478px 510px 53px;
+        grid-template-areas: "header"
+                             "somos"
+                             "fotosbio"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .equipo{
+        padding: 14px;
+        
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    .fotosbio{
+        align-content: center;
+        padding-left: 35%;
+    }
+ 
+}
+/* ----------------- responsive nosotros mobile ---------------- */
+
+@media screen and (max-width:320px) {
+    .grillanos{
+        grid-template-columns: 320px;
+        grid-template-rows: 162px  538px 430px 90px;
+        grid-template-areas: "header"
+                             "somos"
+                             "fotosbio"
+                             "footer"
+                             ;
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .equipo{
+        padding: 10px;
+        
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    .fotosbio{
+        align-content: center;
+        padding-left: 35%;
+    }
+}
+/* ----------------- responsive servicios laptop ----------------*/
+
+@media screen and (max-width:1024px) {
+    .grillaser{
+        grid-template-columns: 1024px;
+        grid-template-rows: 48px 500px 190px 500px 190px 500px 190px 500px 190px 428px 66px;
+        grid-template-areas:
+        "header"
+        "parallax1"
+        "servicios1"
+        "parallax2 "
+        "servicios2"
+        "parallax3"
+        "servicios3"
+        "parallax4"
+        "servicios4"
+        "parallax5 "
+        "footer";
+    }
+
+
+    .navegador {
+        height: 3rem;
+    }
+} 
+/* ----------------- responsive servicios tablet ----------------*/
+
+@media screen and (max-width:768px) {
+    .grillaser{
+        grid-template-columns: 768px;
+        grid-template-rows: 48px 500px 190px 500px 190px 500px 190px 500px 190px 430px 66px;
+        grid-template-areas:
+        "header"
+        "parallax1"
+        "servicios1"
+        "parallax2 "
+        "servicios2"
+        "parallax3"
+        "servicios3"
+        "parallax4"
+        "servicios4"
+        "parallax5 "
+        "footer";
+    }
+    .navegador ul{
+        
+        height: 3rem;
+        
+    }
+    .diferente{
+        width: 5%;
+    }
+
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+
+} 
+/* ----------------- responsive servicios mobile ----------------*/
+
+@media screen and (max-width:425px) {
+    .grillaser{
+        grid-template-columns: 425px;
+        grid-template-rows: 162px 500px 190px 500px 190px 500px 190px 500px 190px 430px 53px;
+        grid-template-areas:
+        "header"
+        "parallax1"
+        "servicios1"
+        "parallax2 "
+        "servicios2"
+        "parallax3"
+        "servicios3"
+        "parallax4"
+        "servicios4"
+        "parallax5 "
+        "footer";
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+    .parallax5 {
+        min-height: 205px;
+        
+    }
+   
+}
+/* ----------------- responsive servicios mobile ----------------*/
+
+@media screen and (max-width:375px) {
+    .grillaser{
+        grid-template-columns: 375px;
+        grid-template-rows: 162px 500px 190px 500px 190px 500px 190px 500px 190px 430px 90px;
+        grid-template-areas:
+        "header"
+        "parallax1"
+        "servicios1"
+        "parallax2 "
+        "servicios2"
+        "parallax3"
+        "servicios3"
+        "parallax4"
+        "servicios4"
+        "parallax5 "
+        "footer";
+    }
+    
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+   
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+   
+    .parallax5 {
+        min-height: 150px;
+        
+    }
+ 
+}
+/* ----------------- responsive servicios mobile ----------------*/
+
+@media screen and (max-width:320px) {
+    .grillaser{
+        grid-template-columns: 320px;
+        grid-template-rows: 162px 500px 190px 500px 190px 500px 190px 500px 190px 586px 90px;
+        grid-template-areas:
+        "header"
+        "parallax1"
+        "servicios1"
+        "parallax2 "
+        "servicios2"
+        "parallax3"
+        "servicios3"
+        "parallax4"
+        "servicios4"
+        "parallax5 "
+        "footer";
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    }
+    
+    .parallax5 {
+        min-height:116px;
+        
+    }
+}
+/* ----------------- responsive contacto laptop ----------------*/
+
+@media screen and (max-width:1024px) {
+    .contactogri{
+        grid-template-columns: 1fr;
+        grid-template-rows: 48px 536px 66px;
+        grid-template-areas: 
+        "header"
+        "formulario"
+        "footer"
+                             ;
+    }
+    
+
+    header{
+        height: 3rem;
+        
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .navegador {
+        height: 3rem;
+    }
+    
+} 
+/* ----------------- responsive contacto tablet ----------------*/
+
+@media screen and (max-width:768px) {
+    .contactogri{
+        grid-template-columns: 768px;
+        grid-template-rows: 48px 535px 64px;
+        grid-template-areas: 
+        "header"
+        "formulario"
+        "footer";
+    }
+    .navegador ul{
+        
+        height: 3rem;
+        
+    }
+    .diferente{
+        width: 5%;
+    }
+
+    
+
+    header {
+        height: 3rem;
+    }
+
+} 
+/* ----------------- responsive contacto mobile ----------------*/
+
+@media screen and (max-width:425px) {
+    .contactogri{
+        grid-template-columns: 425px;
+        grid-template-rows: 162px 546px 53px;
+        grid-template-areas: 
+        "header"
+        "formulario"
+        "footer";
+    
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+       padding: 0px 5px;
+    
+    }
+    
+   
+}
+/* ----------------- responsive contacto mobile ----------------*/
+
+@media screen and (max-width:375px) {
+    .contactogri{
+        grid-template-columns: 375px;
+        grid-template-rows: 162px 546px 90px;
+        grid-template-areas: 
+        "header"
+        "formulario"
+        "footer";
+    }
+    header {
+        height: 4rem;
+    }
+    
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+   
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+        padding: 0px 5px;
+    
+    }
+   
+ 
+}
+/* ----------------- responsive contacto mobile ----------------*/
+
+@media screen and (max-width:320px) {
+
+        .contactogri{
+            grid-template-columns: 320px;
+            grid-template-rows: 162px 546px 90px;
+            grid-template-areas: 
+            "header"
+            "formulario"
+            "footer";
+    }
+    .navegador{
+        height: 10.1rem;
+        position:absolute;
+    }
+    .navegador ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 3rem;
+        padding-top: 5px;
+        
+    }
+
+    .diferente{
+        width: 15%;
+    }
+    .fondofooter{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    header {
+        height: 3rem;
+    }
+    .redes img{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 4%;
+       padding: 0px 5px;
+    }
+    .contactanos {
+    font-size: 150%;
+    text-align: center;
+}
+
+
 }
