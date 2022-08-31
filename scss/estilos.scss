@@ -1,1112 +1,1392 @@
 /* --------- ESTILOS GENERALES ------------  */
-
-*{
-	margin: 0;
-	padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    
-    font-family: Montserrat;
-    border-top: black;
+  font-family: Montserrat;
+  border-top: black;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, hsl(0deg, 0%, 100%) 0%, hsl(0deg, 0%, 95%) 41%, hsl(0deg, 0%, 87%) 74%, hsl(0deg, 0%, 76%) 100%);
 }
 
 /* ----------------- INDEX ----------------*/
-
 nav div.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .navegador-b {
-    align-items: end;
-    height: 60px;
-    z-index: 99999;
-    ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    }
-    a {
-    text-decoration: none;
-    padding: 0.625rem;
-    font-size: 170%;
-    color: black;
-    font-weight: bold;
-}   
-} 
-.navbar-nav{
-    background-color: white;
+  align-items: end;
+  height: 60px;
+  z-index: 99999;
 }
+
+.navegador-b ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navegador-b a {
+  text-decoration: none;
+  padding: 0.625rem;
+  font-size: 170%;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar {
+  padding-top: 4.5rem !important;
+}
+
+.navbar-nav {
+  background-color: white;
+}
+
 .opacidad {
-    animation-name: opa;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
-
+  animation-name: opa;
+  animation-timing-function: ease-out;
+  animation-duration: 4.5s;
 }
+
 @keyframes opa {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 .navegador-b a:hover {
-    color:rgb(32, 0, 65) !important;
+  color: rgb(32, 0, 65) !important;
 }
 
 .diferente {
-    display: flex;
-    align-items: center;
-    width: 7%;
-    justify-content: center;
-    margin: 0%;
-    padding: 0%;
+  display: flex;
+  align-items: center;
+  width: 7%;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
 }
+
 .diferente img:hover {
-    
-    color:rgb(32, 0, 65)
+  filter: opacity(40%);
 }
 
 .nombre {
-    display: flex;
-    background-image: url(../multimedia/1-2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50rem;
-    filter: grayscale(100%);
-    animation-name: opa;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
-    
-    
+  display: flex;
+  background-image: url(../multimedia/LOGOGIF.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50rem;
+  filter: grayscale(100%);
+  animation-name: opa;
+  animation-timing-function: linear;
+  animation-duration: 4.5s;
 }
-.inicio{
-    position: absolute;
-    margin-left: 20px ;
-    display: flex;
-    justify-content: center;
-    animation-name: movimiento;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
 
+.inicio {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: movimiento;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  opacity: 0;
+}
+
+@keyframes movimiento {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+  } 
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 .inicio img {
+  width: 6%;
+  animation-name: escala;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+}
+
+@keyframes escala {
+  0% {
+    width: 40%;
+  }
+  100% {
+    width: 6%;
+  }
+}
+.marca {
+  grid-area: nombre;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-weight: 800;
+  color: white;
+  text-shadow: black;
+  padding: 15rem;
+}
+
+.animate__fadeInDown {
+  animation-duration: 10s;
+}
+
+.size {
+  font-size: 600%;
+}
+
+/* -----------------NOSOTROS----------------*/
+.equipo:hover {
+  transform: scale(1.03);
+  transition: 1s;
+}
+
+.somos {
+  grid-area: somos;
+  border: solid 5px black;
+  margin: 0px;
+  padding: 40px;
+  padding-left: 3%;
+  color: black;
+  font-weight: bold;
+}
+
+.equipo {
+  padding: 1rem;
+  font-size: 350%;
+  text-align: center;
+  border-bottom: solid 1px black;
+}
+.modal-body p {
+  font-size: larger;
+  color: black;
+}
+
+.fotosbio {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.fotosbio button img {
+  border-radius: 100%;
+  filter: grayscale(100%);
+}
+
+a {
+  text-align: center;
+}
+
+.fotosbio button {
+  background: none;
+  border: none;
+}
+
+.fotosbio button img:hover {
+  filter: none;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.staff {
+  display: flex;
+}
+
+.staffnombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 9px 3px 8px black;
+  font-family: fangsong;
+}
+
+
+/* ----------------- SERVICIOS ----------------*/
+/* mapa */
+$color:  (
+    for1: rgba(192, 192, 192, 0.12),
+    for2: rgb(175, 173, 173, 0.12),
+    for3: rgb(139, 138, 138, 0.12),
+    for4: rgb(99, 97, 97, 0.12),
+
+);
+@each $for, $back in $color {
+    .servicios-#{$for} {
+      border-bottom: solid 1px black;
+      border-top: solid 1px black;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 10px;
+      text-align: center;
+      font-weight: bolder;
+      background-color: $back;
+    }
+    
+}
+.parallax1 {
+  grid-area: parallax1;
+  background-image: url(../multimedia/teatro.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  grid-area: parallax2;
+  background-image: url(../multimedia/camaras-de-cine-blackmagic-pocket.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  grid-area: parallax3;
+  background-image: url(../multimedia/CLAQUETA.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  grid-area: parallax4;
+  background-image: url(../multimedia/pexels-donald-tong-66134.jpg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax5 {
+  grid-area: parallax5;
+  background-image: url(../multimedia/teatro.jpeg);
+  min-height: 445px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenido, .contenido-diferente {
+  text-shadow: whitesmoke;
+  font-style: bold;
+}
+
+.contenido-diferente {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.titulo1 {
+  font-size: 40px;
+  color: black
+}
+
+.parallax1 {
+  grid-area: parallax1;
+  background-image: url(../multimedia/teatro.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  grid-area: parallax2;
+  background-image: url(../multimedia/camaras-de-cine-blackmagic-pocket.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  grid-area: parallax3;
+  background-image: url(../multimedia/CLAQUETA.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  grid-area: parallax4;
+  background-image: url(../multimedia/pexels-donald-tong-66134.jpg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax5 {
+  grid-area: parallax5;
+  background-image: url(../multimedia/teatro.jpeg);
+  min-height: 445px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.titulo1:hover {
+  transform: translateY(10px);
+  transition: 1s;
+}
+
+/* ----------------- PROYECTOS ----------------*/
+.titulo {
+  padding: 10px;
+  text-align: center;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+.proyectoTitulo1 {
+  font-size: 200px;
+  text-align: center;
+  z-index: 2;
+  color: black;
+}
+
+.proyectoTitulo2 {
+  font-size: 200px;
+  z-index: -12;
+  position: relative;
+  color: black;
+  text-decoration: black;
+}
+
+.proyectoTitulo3 {
+  font-size: 200px;
+  text-align: end;
+  z-index: 3;
+  color: black;
+}
+
+.foto1 {
+  z-index: -10;
+  position: sticky;
+  top: 4rem;
+  text-align: center;
+  height: 4rem;
+  opacity: 90%;
+}
+
+.foto2 {
+  z-index: -10;
+  position: sticky;
+  top: 4rem;
+  text-align: end;
+  height: 4rem;
+  opacity: 90%;
+}
+
+.margen {
+  margin-top: 19rem;
+}
+
+.margen2 {
+  margin-top: 12rem;
+}
+
+.titulos1 {
+  font-size: 150px;
+  z-index: 2;
+  text-align: initial;
+}
+
+.titulos2 {
+  font-size: 150px;
+  z-index: 2;
+  text-align: end;
+}
+
+.foto3 {
+  z-index: -10;
+  position: sticky;
+  top: 4rem;
+  text-align: start;
+  height: 4rem;
+  opacity: 90%;
+}
+
+.foto4 {
+  z-index: -10;
+  position: sticky;
+  text-align: center;
+  height: 4rem;
+  opacity: 90%;
+  top: 4rem;
+}
+
+.proyectoTitulo4 {
+  font-size: 150px;
+  text-align: center;
+  z-index: 2;
+}
+
+.proyectoTitulo5 {
+  font-size: 200px;
+  z-index: -12;
+  position: relative;
+}
+
+.proyectoTitulo6 {
+  font-size: 150px;
+  text-align: inherit;
+  z-index: 3;
+}
+
+.margen3 {
+  margin-top: 20rem;
+}
+
+.titulo:hover {
+  transform: scale(1.06);
+  transition: 1s;
+}
+
+/* ----------------- CONTACTO ----------------*/
+.contacto-bg {
+  grid-area: formulario;
+  height: 40rem;
+  filter: grayscale(85%);
+  text-shadow: dimgray;
+  background-image: url(../multimedia/contactook2.gif);
+  background-size: cover ;
+  background-repeat: no-repeat;
+} 
+.formulario {
+  color: black;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  padding: 1rem;
+}
+
+label > input, textarea {
+  display: block;
+  padding: 1rem;
+  width: 80%;
+  opacity: 35%;
+  border: solid 1px black;
+  color: white;
+  font-weight: bold;
+}
+
+.contactanos {
+  color: black;
+  font-weight: bold;
+  margin: 1rem;
+  font-size: 250%;
+  text-align: center;
+}
+
+input, textarea {
+  transition: all 1s;
+}
+
+input:focus, textarea:focus {
+  width: 1015px;
+  background-color: #1D3557;
+}
+.enviar{
+  width: 1015px;
+  text-align: center;
+}
+
+/* ----------------- FOOTER ----------------*/
+.fondofooter {
+  /*   background-color: white; */
+  text-align: center;
+}
+
+.redes {
+  justify-content: center;
+  align-content: center;
+  padding-top: 2rem;
+}
+
+.redes img {
+  width: 5%;
+  padding: 0px 10px;
+}
+
+h3 {
+  font-weight: bold;
+  color: black;
+}
+.vimeo:hover {
+  filter: opacity(50%);
+}
+.insta:hover {
+  filter: opacity(50%);
+}
+/* ----------------- responsive index laptop ----------------*/
+@media screen and (max-width: 1440px) {
+  .navegador-b {
+    height: 80px;
+  }
+  .inicio img {
+    width: 7%;
+    animation-name: escala;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+  }
+  @keyframes escala {
+    0% {
+      width: 40%;
+    }
+    20% {
+      width: 25%;
+    }
+    89% {
+      width: 13%;
+    }
+    100% {
+      width: 8%;
+    }
+  }
+  .marca {
+    grid-area: nombre;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-weight: 800;
+    color: white;
+    text-shadow: black;
+    padding: 18rem;
+  }
+}
+/* ----------------- responsive index laptop ----------------*/
+@media screen and (max-width: 1024px) {
+  a {
+    padding: 15rem;
+  }
+  .navegador-b {
+    height: 60px;
+  }
+  .inicio img {
     width: 6%;
     animation-name: escala;
     animation-timing-function: ease-in;
-    animation-duration: 2s;
-
-}
-@keyframes movimiento {
+    animation-duration: 4s;
+  }
+  @keyframes escala {
     0% {
-        z-index: 999999;
-        transform: translateY(150px);  
+      width: 40%;
+    }
+    20% {
+      width: 25%;
+    }
+    89% {
+      width: 13%;
     }
     100% {
-        z-index: -1;
-        transform: translateY(4px);
+      width: 6%;
     }
-}
-@keyframes escala{
-    0% {
-        width: 40%;
-    }
-    100% {
-        width: 7%;
-    }
-}
-
-.marca {
+  }
+  .marca {
+    padding: 16rem;
+  }
+  .marca {
     grid-area: nombre;
     text-align: center;
-    font-family: 'Bebas Neue';
+    font-family: "Bebas Neue";
     font-weight: 800;
     color: white;
     text-shadow: black;
     padding: 15rem;
-
+    padding-left: 9rem;
+  }
+  .size {
+    font-size: 450%;
+    padding: 0%;
+  }
 }
-.animate__animated {
-    animation-duration: 10s;
-    
-}
-.size{
-    font-size: 600%;
-}
-/* -----------------NOSOTROS----------------*/
-
-.equipo:hover {
-    transform: scale(1.03);
-    transition: 1s;
-}
-.somos {
-    grid-area: somos;
-    border: solid  5px black;
-    margin: 0px;
-    padding: 40px;
-    padding-left: 3%;
-    color: black;
-    font-weight: bold;
-}
-.equipo {
-    padding: 1rem;
-    font-size: 350%;
-    text-align: center;
-    border-bottom: solid 1px black;
-
-}
-.fotosbio {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-} 
-.fotosbio a img {
-    border-radius: 100%;
-    filter:grayscale(100%)
-}
-a {
-    text-align: center;
-}
-.fotosbio a img:hover {
-    
-    filter: none;
-    transform: scale(1.05);
-    transition: 1s;
-
-}
-.staff {
-    display: flex;
-}
-.staffnombre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-}
-.staffnombre:hover {
-    transform: scale(1.03);
-    transition: 1s;
-}
-/* ----------------- SERVICIOS ----------------*/
-
-/* mapa */
-$color: (
-    for1: rgb(24, 22, 22),
-    for2: rgb(61, 61, 59),
-    for3: rgb(37, 35, 37),
-    for4: rgb(60, 60, 61)
-);
-@each $for, $back in $color {
-    .servicios-#{$for} {
-        border-bottom: solid  1px black;
-        border-top: solid  1px black;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 10px; 
-        text-align: center;
-        font-weight: bolder;
-        color: white;
-        background-color: $back;
-    }
-}
-
-.parallax1 {
-    grid-area: parallax1;
-    background-image: url(../multimedia/teatro.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax2 {
-    grid-area: parallax2;
-    background-image: url(../multimedia/camaras-de-cine-blackmagic-pocket.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax3 {
-    grid-area: parallax3;
-    background-image: url(../multimedia/CLAQUETA.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax4 {
-    grid-area: parallax4;
-    background-image: url(../multimedia/pexels-donald-tong-66134.jpg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax5 {
-    grid-area: parallax5;
-    background-image: url(../multimedia/teatro.jpeg);
-    min-height: 445px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.contenido {
-    text-shadow: whitesmoke;
-    font-style: bold;
-}
-.contenido-diferente {
-    @extend .contenido;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-@mixin sizes ($tamano, $color){
-    font-size: $tamano;
-    color: $color;
-}
-.titulo1 {
-    @include sizes(40px, grey)
-} 
-
-.parallax1 {
-    grid-area: parallax1;
-    background-image: url(../multimedia/teatro.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax2 {
-    grid-area: parallax2;
-    background-image: url(../multimedia/camaras-de-cine-blackmagic-pocket.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax3 {
-    grid-area: parallax3;
-    background-image: url(../multimedia/CLAQUETA.jpeg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax4 {
-    grid-area: parallax4;
-    background-image: url(../multimedia/pexels-donald-tong-66134.jpg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.parallax5 {
-    grid-area: parallax5;
-    background-image: url(../multimedia/teatro.jpeg);
-    min-height: 445px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-/* ----------------- PROYECTOS ----------------*/
-.titulo { 
-    padding: 10px;
-    text-align: center;
-}
-  .foto1 { 
-      grid-area: foto1; 
-      display: flex;
-      justify-content: start;
-      padding: 10px;
-}
-.foto2 { 
-    grid-area: foto2; 
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-
-}
-.foto3 { 
-    grid-area: foto3; 
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-  .foto4 { 
-      grid-area: foto4; 
-      display: flex;
-      padding: 10px;
-      justify-content: center;
-      
-}
-.foto1 img:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-.foto2 img:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-.foto3 img:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-.foto4 img:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-
-/* ----------------- CONTACTO ----------------*/	
-.contacto-bg {
-    grid-area: formulario;
-    height: 40rem;
-    filter: grayscale(85%);
-    text-shadow: dimgray;
-} 
-.formulario {
-    color: black;
-    font-weight: bold;
-}
-
-
-
-label {
-    display: block;
-    padding: 1rem;
-}
-
-label>input, textarea {
-    display: block;
-    padding: 1rem;
-    width: 80%;
-    opacity: 35%;
-    border: solid 1px black;
-    color: white;
-    font-weight: bold;
-}
-
-.contactanos {
-    color: black;
-    font-weight: bold;   
-    margin: 1rem;
-    font-size: 250%;
-    text-align: center;
-}
-input,textarea {
-    transition: all 1s;
-}
-
-input:focus, textarea:focus{
-    width: 1015px;
-    background-color: #1D3557;
-}
-
-/* ----------------- FOOTER ----------------*/
-
-.fondofooter {
-    grid-area: footer;
-    background-color: white;
-    text-align: center;
-    
-}
-
-.redes {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 10px;
-
-}
-.redes img {
-    width: 5%;
-    padding: 0px 10px;
-}
-h3{
-    font-weight: bold;
-    color: black;
-}
-/* ----------------- responsive index laptop ----------------*/
-@media screen and (max-width:1440px){
-    .navegador-b {
-        height: 80px;
-    }
-    .inicio {
-        margin-left: 149px;
-    }
-    .inicio img {
-        width: 7%;
-        animation-name: escala;
-        animation-timing-function: ease-in;
-        animation-duration: 2s;
-    
-    }
-    @keyframes escala{
-        0% {
-            width: 40%;
-        }
-        100% {
-            width: 8%;
-        }
-    }
-    .marca {
-        grid-area: nombre;
-        text-align: center;
-        font-family: 'Bebas Neue';
-        font-weight: 800;
-        color: white;
-        text-shadow: black;
-        padding: 16rem;
-    
-    }
-
-}
-/* ----------------- responsive index laptop ----------------*/
-
-@media screen and (max-width:1024px) {
-    a {
-        padding: 15rem;
-    }
-    .navegador-b {
-        height: 60px;
-    }
-    .inicio{
-        position: absolute;
-        margin-left: 20px ;
-        display: flex;
-        justify-content: center;
-        animation-name: movimiento;
-        animation-timing-function: ease-in;
-        animation-duration: 2s;
-    
-    }
-    .inicio img {
-        width: 6%;
-        animation-name: escala;
-        animation-timing-function: ease-in;
-        animation-duration: 2s;
-    
-    }
-    @keyframes movimiento {
-        0% {
-            z-index: 999999;
-            transform: translateY(150px);  
-        }
-        100% {
-            z-index: -1;
-            transform: translateY(4px);
-        }
-    }
-    @keyframes escala{
-        0% {
-            width: 40%;
-        }
-        100% {
-            width: 7%;
-        }
-    }
-    
-    .size{
-        font-size: 450%;
-        padding: 0%;
-    }   
-}  
 /* ----------------- responsive index tablet ----------------*/
-@media screen and (max-width:768px) {
-
-    .inicio{
-        margin-left: 3px;
-        margin-top: 0px;
+@media screen and (max-width: 768px) {
+  .inicio img {
+    width: 8%;
+  }
+  @keyframes movimiento {
+    0% {
+      opacity: 0;
+      transform: translateY(90px);
     }
-    .inicio img {
-        width: 8%;
+    20% {
+      opacity: 1;
     }
-    @keyframes movimiento {
-        0% {
-            z-index: 999999;
-            transform: translateY(90px);  
-        }
-        100% {
-            z-index: -1;
-            transform: translateY(20px);
-        }
+    79% {
+      opacity: 1;
     }
-    @keyframes escala{
-        0% {
-            width: 20%;
-        }
-        100% {
-            width: 9%;
-        }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    
-    .navegador-b a{
-        font-size: 120%;
+  }
+  @keyframes escala {
+    0% {
+      width: 20%;
     }
-    .diferente{
-        width: 10%;
+    50% {
+      width: 10%;
     }
-    .size{
-        font-size: 350%;
-        
+    100% {
+      width: 9%;
     }
-    .nombre{
-        height: 40rem;
-    }
-    .marca {
-        padding: 10rem;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-} 
+  }
+  .navegador-b a {
+    font-size: 120%;
+  }
+  .diferente {
+    width: 10%;
+  }
+  .size {
+    font-size: 350%;
+  }
+  .nombre {
+    height: 40rem;
+  }
+  .marca {
+    padding: 10rem;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .redes img {
+    width: 8%;
+  }
+}
 /* ----------------- responsive index mobile ----------------*/
-@media screen and (max-width:425px) {
-    .opacidad {
-        animation-name: opa;
-        animation-timing-function: ease-in;
-        animation-duration: 2s;
-    
-    }
-    .inicio img {
-        width: 0%;
-    }
-    .nombre {
-        animation-name: opa;
-        animation-timing-function: ease-in;
-        animation-duration: 2s;
-        
-        
-    }
-    .diferente{
-        width: 15%;
-    }
-    .nombre{
-        height: 20rem;
-    }
-    .marca {
-        padding: 2rem;
-    }
-    .size{
-        font-size: 200%;
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 6%;
-        padding: 0px 5px;
-    }
-    h3{
-        font-size: 95%;
-    }
-} 
+@media screen and (max-width: 425px) {
+  .navbar {
+    padding-top: 0.5rem !important;
+  }
+  .opacidad {
+    animation-name: opa;
+    animation-timing-function: ease-out;
+    animation-duration: 4.5s;
+  }
+  .inicio img {
+    width: 0%;
+  }
+  .nombre {
+    animation-name: opa;
+    animation-timing-function: ease-out;
+    animation-duration: 4s;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .nombre {
+    height: 20rem;
+  }
+  .marca {
+    padding: 2rem;
+  }
+  .size {
+    font-size: 200%;
+  }
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 8%;
+    padding: 0px 5px;
+  }
+  h3 {
+    font-size: 95%;
+  }
+}
 /* ----------------- responsive index mobile ----------------*/
 @media screen and (max-width: 375px) {
-        .marca{
-            padding: 2rem;
-        }
-        .redes img{
-            flex-wrap: wrap;
-            flex-direction: column;
-            width: 6%;
-            padding: 0px 5px;
-        }
-}  
+  .marca {
+    padding: 2rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 6%;
+    padding: 0px 5px;
+  }
+}
 /* ----------------- responsive index mobile ----------------*/
-@media screen and (max-width:320px) {
-    .marca{
-        padding: 2rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 7%;
-        padding: 0px 5px;
-    }
-    .size{
-        font-size: 160%;
-    }
-    h3{
-        font-size: 90%;
-    }
+@media screen and (max-width: 320px) {
+  .marca {
+    padding: 2rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 7%;
+    padding: 0px 5px;
+  }
+  .size {
+    font-size: 160%;
+  }
+  h3 {
+    font-size: 90%;
+  }
+  .nombre {
+    height: 16rem;
+  }
 }
 /* ----------------- responsive proyecto laptop ----------------*/
-
-@media screen and (max-width:1024px) {
-    .conteiner{
-        grid-template-columns: repeat(2, 510px);
-        grid-template-rows: 48px 50px 300px 300px 66px;
-        grid-template-areas: "header header"
-                             "titulo titulo"
-                             "foto1 foto2"
-                             "foto3 foto4"
-                             "footer footer"
-                             ;
-    }
-    header{
-        height: 3rem;
-        
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .navegador {
-        height: 3rem;
-    }
-    .nombre{
-        padding: 5rem;
-    }
-} 
+@media screen and (max-width: 1440px) {
+  .margen {
+    margin-top: 27rem;
+  }
+  .margen3 {
+    margin-top: 23rem;
+  }
+  .margen4 {
+    margin-bottom: 6rem;
+  }
+  .redes {
+    padding-top: 8rem;
+  }
+}
+/* ----------------- responsive proyecto laptop ----------------*/
+@media screen and (max-width: 1024px) {
+  .titulo {
+    padding: 18px;
+  }
+  .proyectoTitulo6 {
+    font-size: 125px;
+  }
+  .redes {
+    padding-top: 0rem;
+  }
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navegador {
+    height: 3rem;
+  }
+  .nombre {
+    padding: 5rem;
+  }
+  .proyectoTitulo1 {
+    font-size: 150px;
+    text-align: center;
+    z-index: 2;
+  }
+  .titulos1 {
+    font-size: 125px;
+    z-index: 2;
+  }
+  .proyectoTitulo4 {
+    font-size: 115px;
+    text-align: center;
+    z-index: 2;
+  }
+  .margen3 {
+    margin-top: 13rem;
+  }
+}
 /* ----------------- responsive proyecto tablet ----------------*/
-
-@media screen and (max-width:768px) {
-    .navegador ul{
-        
-        height: 3rem;
-        
-    }
-    .diferente{
-        width: 8%;
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-} 
+@media screen and (max-width: 768px) {
+  .diferente {
+    width: 8%;
+  }
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3rem;
+  }
+  .proyectoTitulo1 {
+    font-size: 100px;
+    text-align: center;
+    z-index: 2;
+  }
+  .proyectoTitulo2 {
+    font-size: 100px;
+    z-index: -12;
+    position: relative;
+  }
+  .proyectoTitulo3 {
+    font-size: 100px;
+    text-align: end;
+    z-index: 3;
+  }
+  .titulos1 {
+    font-size: 100px;
+    z-index: 2;
+    text-align: initial;
+  }
+  .titulos2 {
+    font-size: 100px;
+    z-index: 2;
+    text-align: end;
+  }
+  .proyectoTitulo4 {
+    font-size: 80px;
+    text-align: center;
+    z-index: 2;
+  }
+  .proyectoTitulo5 {
+    font-size: 100px;
+    z-index: -12;
+    position: relative;
+  }
+  .proyectoTitulo6 {
+    font-size: 100px;
+    text-align: inherit;
+    z-index: 3;
+  }
+  .margen {
+    margin-top: 12rem;
+  }
+  .margen2 {
+    margin-top: 5rem;
+  }
+  .margen3 {
+    margin-top: 10rem;
+  }
+  .redes {
+    padding-top: 2rem;
+  }
+}
 /* ----------------- responsive proyecto mobile ----------------*/
-
-@media screen and (max-width:425px) {
-    .diferente{
-        width: 15%;
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    
-    }
-} 
+@media screen and (max-width: 425px) {
+  .foto1 {
+    z-index: -10;
+    position: relative;
+    top: 0rem;
+    text-align: center;
+    height: 0rem;
+    opacity: 70%;
+  }
+  .foto1 img {
+    width: 50%;
+  }
+  .proyectoTitulo1 {
+    font-size: 70px;
+    text-align: center;
+    z-index: 2;
+    font-weight: 300;
+  }
+  .proyectoTitulo2 {
+    font-size: 70px;
+    z-index: 1;
+    text-align: center;
+  }
+  .proyectoTitulo3 {
+    font-size: 70px;
+    text-align: center;
+    z-index: 3;
+  }
+  .margen {
+    margin-top: 6rem;
+  }
+  .foto2 {
+    z-index: -10;
+    position: relative;
+    top: 0rem;
+    text-align: center;
+    height: 0rem;
+    opacity: 70%;
+  }
+  .foto2 img {
+    width: 90%;
+  }
+  .titulos1 {
+    font-size: 50px;
+    z-index: 2;
+    text-align: center;
+  }
+  .margen2 {
+    margin-top: 3rem;
+  }
+  .foto3 {
+    z-index: -10;
+    position: relative;
+    top: 0rem;
+    text-align: center;
+    height: 0rem;
+    opacity: 70%;
+  }
+  .foto3 img {
+    width: 90%;
+  }
+  .titulos2 {
+    font-size: 70px;
+    z-index: 2;
+    text-align: center;
+  }
+  .margen3 {
+    margin-top: 5rem;
+  }
+  .foto4 {
+    z-index: -10;
+    position: relative;
+    text-align: center;
+    height: 0rem;
+    opacity: 70%;
+    top: 0rem;
+  }
+  .foto4 img {
+    width: 50%;
+  }
+  .proyectoTitulo4 {
+    font-size: 50px;
+    text-align: center;
+    z-index: 2;
+  }
+  .proyectoTitulo5 {
+    font-size: 70px;
+    z-index: 2;
+    text-align: center;
+  }
+  .proyectoTitulo6 {
+    font-size: 70px;
+    text-align: center;
+    z-index: 3;
+  }
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 4%;
+    padding: 0px 5px;
+  }
+  .redes {
+    padding-top: 3.5rem;
+  }
+}
 /* ----------------- responsive proyecto mobile ----------------*/
-
-@media screen and (max-width:375px) {
-
-    .diferente{
-        width: 15%;
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    
-    }
-} 
+@media screen and (max-width: 375px) {
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .proyectoTitulo1 {
+    font-size: 50px;
+    text-align: center;
+    z-index: 2;
+    font-weight: 300;
+  }
+  .proyectoTitulo4 {
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+  }
+  header {
+    height: 3rem;
+  }
+  .margen3 {
+    margin-top: 2rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 4%;
+    padding: 0px 5px;
+  }
+  .redes {
+    padding-top: 2rem;
+  }
+}
 /* ----------------- responsive proyecto mobile ----------------*/
-
-@media screen and (max-width:320px) {
-    .diferente{
-        width: 15%;
-    }
-    .footer{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    
-    }
-    }
+@media screen and (max-width: 320px) {
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .foto1 img {
+    width: 60%;
+  }
+  .proyectoTitulo1 {
+    font-size: 45px;
+    text-align: center;
+    z-index: 2;
+    font-weight: 300;
+  }
+  .foto2 img {
+    width: 93%;
+  }
+  .titulos1 {
+    font-size: 45px;
+    z-index: 2;
+    text-align: center;
+  }
+  .foto3 img {
+    width: 94%;
+  }
+  .titulos2 {
+    font-size: 62px;
+    z-index: 2;
+    text-align: center;
+  }
+  .proyectoTitulo4 {
+    font-size: 35px;
+    text-align: center;
+    z-index: 2;
+  }
+  .margen3 {
+    margin-top: 3rem;
+  }
+  header {
+    height: 3rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 6%;
+    padding: 0px 5px;
+  }
+  .redes {
+    padding-top: 1rem;
+  }
+}
 /* ----------------- responsive nosotros laptop ----------------*/
-@media screen and (max-width:1024px) {
-.somos {
+@media screen and (max-width: 1024px) {
+  .somos {
     margin: 3px;
-}
-a {
+  }
+  a {
     padding: 0;
+  }
 }
-} 
 /* ----------------- responsive nosotros tablet ----------------*/
-
-@media screen and (max-width:768px) {}
 /* ----------------- responsive nosotros mobile ----------------*/
-@media screen and (max-width:425px) {
-    .staff {
-        flex-direction: column !important;
-        align-items: center;
-        justify-content: center;
-    }
-    .staffnombre h2, h4 {
-        text-align: center;
-    }
-    .fotosbio a img {
-        width: 70%;
-    }
-
+@media screen and (max-width: 425px) {
+  .staff {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .staffnombre h2, h4 {
+    text-align: center;
+  }
+  .fotosbio a img {
+    width: 70%;
+  }
 }
 /* ----------------- responsive nosotros mobile ----------------*/
-
-@media screen and (max-width:375px) {
-}
 /* ----------------- responsive nosotros mobile ---------------- */
-
-@media screen and (max-width:320px) {
-    .fotosbio a img {
-        width: 90%;
-    }
+@media screen and (max-width: 320px) {
+  .fotosbio a img {
+    width: 90%;
+  }
 }
 /* ----------------- responsive servicios laptop ----------------*/
-
-@media screen and (max-width:1024px) {
-    .navegador {
-        height: 3rem;
-    }
-} 
+@media screen and (max-width: 1440px) {
+  .redes {
+    padding-top: 2rem;
+  }
+}
+/* ----------------- responsive servicios laptop ----------------*/
+@media screen and (max-width: 1024px) {
+  .navegador {
+    height: 3rem;
+  }
+}
 /* ----------------- responsive servicios tablet ----------------*/
-
-@media screen and (max-width:768px) {
-    .navegador ul{
-        
-        height: 3rem;
-        
-    }
-    .diferente{
-        width: 5%;
-    }
-
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-
-} 
-/* ----------------- responsive servicios mobile ----------------*/
-
-@media screen and (max-width:425px) {
-    .navegador-b {
-        height: 48px;
-    }
-    .navegador{
-        height: 10.1rem;
-        position:absolute;
-    }
-    .navegador ul{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 3rem;
-        padding-top: 5px;
-        
-    }
-    .diferente{
-        width: 15%;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    
-    }
-    .parallax5 {
-        min-height: 205px;
-        
-    }
+@media screen and (max-width: 768px) {
+  .navegador ul {
+    height: 3rem;
+  }
+  .diferente {
+    width: 5%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3rem;
+  }
 }
 /* ----------------- responsive servicios mobile ----------------*/
-
-@media screen and (max-width:375px) {
-    .navegador-b {
-        height: 48px;
-    }
-    
-    .navegador{
-        height: 10.1rem;
-        position:absolute;
-    }
-    .navegador ul{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 3rem;
-        padding-top: 5px;
-        
-    }
-    .diferente{
-        width: 15%;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-   
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    
-    }
-   
-    .parallax5 {
-        min-height: 150px;
-        
-    }
- 
+@media screen and (max-width: 425px) {
+  .navegador-b {
+    height: 48px;
+  }
+  .navegador {
+    height: 10.1rem;
+    position: absolute;
+  }
+  .navegador ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    padding-top: 5px;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3.5rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 4%;
+    padding: 0px 5px;
+  }
+  .parallax5 {
+    min-height: 205px;
+  }
 }
 /* ----------------- responsive servicios mobile ----------------*/
-
-@media screen and (max-width:320px) {
-    .navegador-b {
-        height: 48px;
-    }
-    .navegador{
-        height: 10.1rem;
-        position:absolute;
-    }
-    .navegador ul{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 3rem;
-        padding-top: 5px;
-        
-    }
-    .diferente{
-        width: 15%;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    header {
-        height: 3rem;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 4%;
-        padding: 0px 5px;
-    }
-    
-    .parallax5 {
-        min-height:116px;
-        
-    }
+@media screen and (max-width: 375px) {
+  .navegador-b {
+    height: 48px;
+  }
+  .navegador {
+    height: 10.1rem;
+    position: absolute;
+  }
+  .navegador ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    padding-top: 5px;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3.5rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 4%;
+    padding: 0px 5px;
+  }
+  .parallax5 {
+    min-height: 150px;
+  }
+  .redes {
+    padding-top: 0.5rem;
+  }
+}
+/* ----------------- responsive servicios mobile ----------------*/
+@media screen and (max-width: 320px) {
+  .navegador-b {
+    height: 48px;
+  }
+  .navegador {
+    height: 10.1rem;
+    position: absolute;
+  }
+  .navegador ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    padding-top: 5px;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    height: 3.5rem;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 4%;
+    padding: 0px 5px;
+  }
+  .parallax5 {
+    min-height: 116px;
+  }
 }
 /* ----------------- responsive contacto laptop ----------------*/
-
-@media screen and (max-width:1024px) {
-    header{
-        height: 3rem;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .navegador {
-        height: 3rem;
-    }
-    .contacto-bg{
-        height: 35rem;
-    }
-} 
+@media screen and (max-width: 1024px) {
+  header {
+    height: 3rem;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navegador {
+    height: 3rem;
+  }
+  .contacto-bg {
+    height: 35rem;
+  }
+}
 /* ----------------- responsive contacto tablet ----------------*/
-@media screen and (max-width:768px) {
-    .diferente{
-        width: 8%;
-    }
-    header {
-        height: 3rem;
-    }
-    .contacto-bg{
-        height: 27rem;
-    }
-    .contactanos {
-        margin: 0px;
-        font-size: 200%;
-    }
-    label>input, textarea {
-        width: 70%;
-        padding: 0rem;
-    }
-    input:focus, textarea:focus{
-        width: 600px;
-        background-color: #1D3557;
-    }
-}  
-/* ----------------- responsive contacto mobile ----------------*/
-@media screen and (max-width:425px) {
-    .contacto-bg{
-        height: 20rem;
-    }
-    .contactanos {
-        margin: 0px;
-        font-size: 200%;
-    }
-    label{
-        padding: 0rem;
-    }
-    label>input, textarea {
-        width: 50%;
-        padding: 0rem;
-    }
-    input:focus, textarea:focus{
-        width: 350px;
-        background-color: #1D3557;
-    }
-    .diferente{
-        width: 15%;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 6%;
-        padding: 0px 5px;
-    }
-} 
-/* ----------------- responsive contacto mobile ----------------*/
-@media screen and (max-width:375px) {
-    .contactanos {
-        margin: 0px;
-        font-size: 200%;
-    }
-    label{
-        padding: 0rem;
-    }
-    label>input, textarea {
-        width: 50%;
-        padding: 0rem;
-    }
-    input:focus, textarea:focus{
-        width: 300px;
-        background-color: #1D3557;
-    }
-    .diferente{
-        width: 15%;
-    }
-    .fondofooter{
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 6%;
-        padding: 0px 5px;
-    
-    }
+@media screen and (max-width: 768px) {
+  .diferente {
+    width: 8%;
+  }
+  header {
+    height: 3.5rem;
+  }
+  .contacto-bg {
+    height: 27rem;
+  }
+  .contactanos {
+    margin: 0px;
+    font-size: 200%;
+  }
+  label > input, textarea {
+    width: 70%;
+    padding: 0rem;
+  }
+  input:focus, textarea:focus {
+    width: 600px;
+    background-color: #1D3557;
+  }
 }
 /* ----------------- responsive contacto mobile ----------------*/
-@media screen and (max-width:320px) {
-    .navegador-b{
-        height: 0rem;
-    }
-    
-    label{
-        padding: 0rem;
-    }
-    label>input, textarea {
-        width: 50%;
-        padding: 0rem;
-    }
-    input:focus, textarea:focus{
-        width: 250px;
-        background-color: #1D3557;
-    }
-    .redes img{
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 7%;
-        padding: 0px 5px;
-    }
-    .contactanos {
+@media screen and (max-width: 425px) {
+  .contacto-bg {
+    height: 20rem;
+  }
+  .contactanos {
+    margin: 0px;
+    font-size: 200%;
+  }
+  label {
+    padding: 0rem;
+  }
+  label > input, textarea {
+    width: 50%;
+    padding: 0rem;
+  }
+  input:focus, textarea:focus {
+    width: 350px;
+    background-color: #1D3557;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 6%;
+    padding: 0px 5px;
+  }
+}
+/* ----------------- responsive contacto mobile ----------------*/
+@media screen and (max-width: 375px) {
+  .contactanos {
+    margin: 0px;
+    font-size: 200%;
+  }
+  label {
+    padding: 0rem;
+  }
+  label > input, textarea {
+    width: 50%;
+    padding: 0rem;
+  }
+  input:focus, textarea:focus {
+    width: 300px;
+    background-color: #1D3557;
+  }
+  .diferente {
+    width: 15%;
+  }
+  .fondofooter {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 6%;
+    padding: 0px 5px;
+  }
+  header {
+    height: 3.5rem;
+  }
+}
+/* ----------------- responsive contacto mobile ----------------*/
+@media screen and (max-width: 320px) {
+  header {
+    height: 3.5rem;
+  }
+  label {
+    padding: 0rem;
+  }
+  label > input, textarea {
+    width: 50%;
+    padding: 0rem;
+  }
+  input:focus, textarea:focus {
+    width: 250px;
+    background-color: #1D3557;
+  }
+  .redes img {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 7%;
+    padding: 0px 5px;
+  }
+  .contactanos {
     font-size: 150%;
     text-align: center;
-    }
+  }
 }
+
+/*# sourceMappingURL=estilos.css.map */
